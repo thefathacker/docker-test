@@ -9,4 +9,4 @@ RUN apt-get update && apt-get install --yes --no-install-recommends apache2
 
 EXPOSE 80
 
-CMD [“/usr/sbin/apachectl2”, “-D”, “FOREGROUND”]
+CMD [“/usr/sbin/apache2ctl”, “-D”, “FOREGROUND”]
