@@ -8,3 +8,5 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get update && apt-get install --yes --no-install-recommends apache2
 
 EXPOSE 80
+
+CMD [“apache2ctl”, “-D”, “FOREGROUND”]
