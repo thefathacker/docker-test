@@ -5,8 +5,8 @@ MAINTAINER The Fat Hacker "thefathacker@thefathacker.tech"
 ENV TZ=Australia/Brisbane
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN apt-get update && apt-get install --yes --no-install-recommends apache2 apache2-utils
+RUN apt-get update && apt-get install --yes --no-install-recommends apache2
 
 EXPOSE 80
 
-CMD [“/usr/sbin/apache2ctl”, “-D”, “FOREGROUND”]
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
